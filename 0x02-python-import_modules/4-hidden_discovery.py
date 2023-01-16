@@ -6,5 +6,5 @@ if __name__ == "__main__":
     x = dir(hidden_4)
 
     for mod in x:
-        if name[:2] != "__":
+        if mod[:2] != "__":
             print(mod)
