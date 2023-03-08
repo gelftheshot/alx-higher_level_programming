@@ -4,7 +4,7 @@
 def safe_print_list(my_list=[], x=0):
 
     tot = 0
-    for i in range(len(my_list)):
+    for i in range(x):
         try:
             print("{}".formate(my_list[i]), end = "")
             tot = tot + 1
