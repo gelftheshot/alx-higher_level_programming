@@ -13,4 +13,3 @@ def best_score(a_dictionary):
             max1 = v
             ret = k
     return (ret)
-
