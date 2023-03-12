@@ -68,6 +68,6 @@ class Rectangle:
 
     def __repr__(self):
         "return a string used as a call for the second time"
-        arr = "Rectangel(" + str(self.__width)
+        arr = "Rectangle(" + str(self.__width)
         arr = arr + "," + str(self.height) + ")"
         return arr
