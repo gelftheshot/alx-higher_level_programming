@@ -8,6 +8,7 @@ class Rectangle:
     """repersents a rectangle..."""
     number_of_instances = 0
     print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """ initilizing the class rectangle
 
@@ -63,7 +64,7 @@ class Rectangle:
         arr = []
         for i in range(self.__height):
             for j in range(self.__width):
-                arr.append("#")
+                arr.append(str(self.print_symbol))
             if (i != self.height-1):
                 arr.append("\n")
         return ("".join(arr))
