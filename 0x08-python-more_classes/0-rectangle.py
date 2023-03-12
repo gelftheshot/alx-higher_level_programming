@@ -1,7 +1,9 @@
 #!/usr/bin/python#
 # 0-rectangle.py
 
-        " initilizing class rectangle"
-class Rectangle:
-    pass
+"""defining class rectangle"""
 
+
+class Rectangle:
+    """inint.. the class """
+    pass
