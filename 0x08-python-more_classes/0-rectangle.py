@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python#
 # 0-rectangle.py
 
         " initilizing class rectangle"
