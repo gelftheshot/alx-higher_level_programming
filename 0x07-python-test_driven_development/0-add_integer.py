@@ -3,7 +3,7 @@
 
 def add_integer(a, b=98):
     """take two numbers and return their sum
-        
+
         Args:
             a (int) - is the first number
             b(int) - is the second number with option 98
