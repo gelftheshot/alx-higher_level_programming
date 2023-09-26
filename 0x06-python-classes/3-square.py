@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/pyhthon3
 
 """a python class that defins a square"""
 
