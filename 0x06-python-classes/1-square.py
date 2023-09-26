@@ -4,7 +4,7 @@
 
 
 class Square:
-    "a calss that represents a Square"
+    """a calss that represents a Square"""
 
     def __init__(self, size):
         """ the function intent to inin some parameters of

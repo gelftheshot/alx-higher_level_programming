@@ -4,5 +4,5 @@
 
 
 class Square:
-    "a calss that represents a Square"
+    """a calss that represents a Square"""
     pass
