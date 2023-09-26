@@ -1,5 +1,7 @@
 #!/usr/bin/pyhton3
 # 0-square.py
+# Gelfato Junga <gelf.learing@gmail.com>
+
 """a python class that defins a square"""
 
 
