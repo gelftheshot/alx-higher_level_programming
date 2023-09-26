@@ -8,4 +8,3 @@
 class Square:
     """A calss that represents a Square"""
     pass
-
