@@ -16,8 +16,8 @@ class Rectangle():
             width (int) - is the width of the rectangel
         """
 
-        self.height = height
         self.width = width
+        self.height = height
         type(self).number_of_instances += 1
 
     @property
