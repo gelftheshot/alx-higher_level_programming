@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import sys
 
+
 def solve_n_queen(n):
     """the main method that solves the problem
     Args:
@@ -9,13 +10,15 @@ def solve_n_queen(n):
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
         sys.exit(1)
-    if not isinstance(n, int):
+
+    if sys.argv[1].isdigit() is False:
         print("N must be a number")
         sys.exit(1)
-    if n < 4:
+
+    if int(sys.argv[1]) < 4:
         print("N must be at least 4")
         sys.exit(1)
-
+    n = int(n)
     colomon = set()
     diagonal1 = set()
     diagonal2 = set()
@@ -52,4 +55,5 @@ def solve_n_queen(n):
     backtracker(0)
 
 
-solve_n_queen(int(sys.argv[1]))
+if __name__ == "__main__":
+    solve_n_queen(sys.argv[1])
