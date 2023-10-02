@@ -7,18 +7,7 @@ def solve_n_queen(n):
     Args:
         n (int) is the number of rows and clo
     """
-    if len(sys.argv) != 2:
-        print("Usage: nqueens N")
-        sys.exit(1)
 
-    if sys.argv[1].isdigit() is False:
-        print("N must be a number")
-        sys.exit(1)
-
-    if int(sys.argv[1]) < 4:
-        print("N must be at least 4")
-        sys.exit(1)
-    n = int(n)
     colomon = set()
     diagonal1 = set()
     diagonal2 = set()
@@ -56,4 +45,16 @@ def solve_n_queen(n):
 
 
 if __name__ == "__main__":
-    solve_n_queen(sys.argv[1])
+    if len(sys.argv) != 2:
+        print("Usage: nqueens N")
+        sys.exit(1)
+
+    if sys.argv[1].isdigit() is False:
+        print("N must be a number")
+        sys.exit(1)
+
+    if int(sys.argv[1]) < 4:
+        print("N must be at least 4")
+        sys.exit(1)
+
+    solve_n_queen(int(sys.argv[1]))
