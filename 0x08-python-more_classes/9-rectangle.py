@@ -92,8 +92,11 @@ class Rectangle():
             return rect_1
         else:
             return rect_2
-
     @classmethod
     def square(cls, size=0):
-        """ this function will return a class"""
+        """Return a new Rectangle with width and height equal to size.
+
+        Args:
+            size (int): equal with and height
+        """
         return (cls(size, size))
