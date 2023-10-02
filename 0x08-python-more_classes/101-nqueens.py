@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 import sys
 
-"""a class representing a N queen"""
-
-
 def solve_n_queen(n):
     """the main method that solves the problem
     Args:
@@ -11,13 +8,13 @@ def solve_n_queen(n):
     """
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
-        exit(1)
+        sys.exit(1)
     if not isinstance(n, int):
         print("N must be a number")
-        exit(1)
+        sys.exit(1)
     if n < 4:
         print("N must be at least 4")
-        exit(1)
+        sys.exit(1)
 
     colomon = set()
     diagonal1 = set()
