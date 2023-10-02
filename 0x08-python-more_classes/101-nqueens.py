@@ -39,7 +39,8 @@ def solve_n_queen(n):
                 result.pop()
             return
         for col in range(n):
-            if col in colomon or (row + col) in diagonal1 or (row - col) in diagonal2:
+            if (col in colomon or (row + col) in diagonal1 or
+                    (row - col) in diagonal2):
                 continue
             colomon.add(col)
             diagonal1.add(col + row)
@@ -52,5 +53,6 @@ def solve_n_queen(n):
             diagonal2.remove(row - col)
             board[row][col] = "."
     backtracker(0)
-    
+
+
 solve_n_queen(int(sys.argv[1]))
