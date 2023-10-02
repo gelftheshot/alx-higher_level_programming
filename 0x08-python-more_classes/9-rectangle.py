@@ -95,4 +95,5 @@ class Rectangle():
 
     @classmethod
     def square(cls, size=0):
+		""" this function will return a class with with and hight of size"""
         return cls(size, size)
