@@ -17,8 +17,6 @@ def matrix_divided(matrix, div):
     if not (isinstance(div , int) or isinstance(div float)):
         raise TypeError("div must be a number")
     if div == 0:
-        rise ZeroDivisionError("division by zero")
-    for i in range len(matrix):
-        for j in range len(i):
+        raise ZeroDivisionError("division by zero")
 
 
