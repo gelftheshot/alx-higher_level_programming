@@ -1,0 +1,71 @@
+this is the funcion used to print endeted text 
+
+************************** tryint import the fucntion itself first *****************************************************
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("tomas?")
+    tomas?
+    <BLANKLINE>
+
+*******************No spaces are printed at the beginning of a line.***********
+
+
+    >>> text_indentation("   Hi there.")
+    Hi there.
+    <BLANKLINE>
+
+
+    >>> text_indentation("          ")
+
+
+    >>> text_indentation("tomas.   ")
+    tomas.
+    <BLANKLINE>
+
+
+    >>> text_indentation("    first now.    This is latter.   ")
+    first now.
+    <BLANKLINE>
+    This is latter.
+    <BLANKLINE>
+
+
+    >>> text_indentation("so what we get drunk so what we smok weed")
+    so what we get drunk so what we smok weed
+
+New lines within a string are printed as normal.
+
+    >>> text_indentation("tryint print a new-line! Here goes:\nPrinted.")
+    tryint print a new-line! Here goes:
+    <BLANKLINE>
+    <BLANKLINE>
+    Printed.
+    <BLANKLINE>
+
+
+    >>> text_indentation("\n\n\n something.")
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    something.
+    <BLANKLINE>
+
+    >>> text_indentation("Gelfeto \n new line.")
+    Gelfeto 
+    new line.
+    <BLANKLINE>
+
+
+    >>> text_indentation(7)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+
+    >>> text_indentation({"one": 1, "two": 2})
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
