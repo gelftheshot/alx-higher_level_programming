@@ -1,0 +1,54 @@
+********************** This is A Test Case for 4-print_square.py ****************
+
+************** first let's import the function it self ***************
+
+    >>> print_square = __import__('4-print_square').print_square
+
+************** let's test for 0, 1, 5, (positive number) ******************
+
+    >>> print_square(0)
+
+    >>> print_square(1)
+    #
+
+    >>> print_square(5)
+    #####
+    #####
+    #####
+    #####
+    #####
+
+********* let's test some invalid cases ******************
+
+******* non number str, float and list and negative number  ***********
+
+    >>> print_square("non int value")
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square(1.22)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square(-2)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+******* lets's test for None valeu *********
+
+    >>> print_square(None)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+******* let's test for empyt case *****
+
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'
+    
+***** and we have to check if it is integer before checking it is >= 0
+
+    >>> print_square(-2.5)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
