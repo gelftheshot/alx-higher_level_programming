@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-""" this is the functin that return the full name from the first and lat name """
+""" this is thein that return the full name from the first and lat name """
+
 
 def say_my_name(first_name, last_name=""):
-    """this function prints full name by taking first and last name as
+    """this function full name by taking first and last name as
         an arguement
         Args:
         first_name(str) - is the first name

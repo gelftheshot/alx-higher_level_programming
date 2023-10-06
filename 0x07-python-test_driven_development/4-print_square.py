@@ -2,8 +2,9 @@
 
 """ this is a function that prints # square of size size """
 
+
 def print_square(size):
-    """ the function stats herer 
+    """ the function stats herer
 
         Args:
             size (int) : the size(length and width )
@@ -18,4 +19,3 @@ def print_square(size):
         for j in range(size):
             print("#", end="")
         print("")
-  
