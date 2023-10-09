@@ -1,0 +1,36 @@
+This is the test for 1-print_list
+
+**** first let's import the class it self and chcek it's type out
+
+    >>> mylist = __import__('1-my_list').MyList
+    >>> tom = mylist()
+    >>> type(tom)
+    <class '1-my_list.MyList'>
+
+***** then let's check if the sorted list works or not. 
+
+    >>> tom = mylist([4,5,3,1,0])
+    >>> tom.print_sorted()
+    [0, 1, 3, 4, 5]
+
+******* let's test for empty case
+
+    >>> tom = mylist()
+    >>> tom.print_sorted()
+    []
+
+******** let's try to append 
+
+    >>> tom = mylist()
+    >>> tom.append(88)
+    >>> tom.append(34)
+    >>> tom.append(24)
+    >>> tom.append(12)
+    >>> tom.append(19)
+    >>> print(tom)
+    [88, 34, 24, 12, 19]
+    >>> tom.print_sorted()
+    [12, 19, 24, 34, 88]
+
+
+
