@@ -8,5 +8,6 @@ class MyInt(int):
 
     def __eq__(self, __value: object):
         return super().__ne__(__value)
+
     def __ne__(self, __value: object):
         return super().__eq__(__value)
