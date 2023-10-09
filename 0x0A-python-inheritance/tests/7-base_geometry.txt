@@ -1,0 +1,51 @@
+This is the test case for 7-base Geometry 
+
+first let's import and test it's type
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> base_geometry = BaseGeometry()
+    >>> type(base_geometry)
+    <class '7-base_geometry.BaseGeometry'>
+
+****** we can't have argument inside our base Geometry
+
+    >>> base_geometry = BaseGeometry(22)
+    Traceback (most recent call last):
+    TypeError: BaseGeometry() takes no arguments
+
+    ******* test for area ******
+
+    >>> base_geometry.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+****** test for integer valdater ****
+
+**** testing number value
+
+   >>> base_geometry.integer_validator("two", 2)
+
+*** testing non number value
+
+    >>> base_geometry.integer_validator("two", "two")
+    Traceback (most recent call last):
+    TypeError: two must be an integer
+
+*** test for none  case 
+
+    >>> base_geometry.integer_validator("not number", None)
+    Traceback (most recent call last):
+    TypeError: not number must be an integer
+
+**** testing for value less than 0 
+
+**** test for negative number
+
+    >>> base_geometry.integer_validator("mines one", -1)
+    Traceback (most recent call last):
+    ValueError: mines one must be greater than 0
+
+
+    >>> base_geometry.integer_validator("zero", 0)
+    Traceback (most recent call last):
+    ValueError: zero must be greater than 0
