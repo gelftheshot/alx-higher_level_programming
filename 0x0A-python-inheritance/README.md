@@ -1,1 +1,1 @@
-this is the readme file for 0x0A-python-inheritance
+this is the readme file for 0x0A-python-inhertance
