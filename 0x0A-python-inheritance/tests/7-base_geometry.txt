@@ -13,13 +13,36 @@ first let's import and test it's type
     Traceback (most recent call last):
     TypeError: BaseGeometry() takes no arguments
 
+    >>> print(base_geometry) # doctest: +ELLIPSIS
+    <7-base_geometry.BaseGeometry object at ...>
+
+********* tesing for none case 
+
+    >>> base_geometry = BaseGeometry(None)
+    Traceback (most recent call last):
+    TypeError: BaseGeometry() takes no arguments
+
     ******* test for area ******
 
     >>> base_geometry.area()
     Traceback (most recent call last):
     Exception: area() is not implemented
 
+**** let's know about it
+
+    >>> base_geometry = BaseGeometry()
+    >>> print(base_geometry.area) # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+    <bound method BaseGeometry.area of <7-base_geometry.BaseGeometry 
+     object at...>>
+
 ****** test for integer valdater ****
+
+*** let's know about it 
+
+    >>> print(base_geometry.integer_validator) # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+    <bound method BaseGeometry.integer_validator of <7-base_geometry.BaseGeometry 
+    object at...>>
+
 
 **** testing number value
 
@@ -49,3 +72,10 @@ first let's import and test it's type
     >>> base_geometry.integer_validator("zero", 0)
     Traceback (most recent call last):
     ValueError: zero must be greater than 0
+
+**** testing for empty case 
+
+    >>> base_geometry.integer_validator()
+    Traceback (most recent call last):
+    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
