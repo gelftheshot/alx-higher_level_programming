@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 
+"""Defines a text file-reading function."""
+
 
 def read_file(filename=""):
-    """ read from file and return the file contant
-        Args:
-            filename (str) - is the name of the file
-    """
-    with open(filename, "r", encoding="utf-8") as file:
-        tom = file.read()
-        print(tom)
+    """Print the contents of the file to stdout."""
+    with open(filename, encoding="utf-8") as file:
+        print(file.read(), end="")
