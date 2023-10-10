@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+"""Defines a function write a text to a function """
+
 
 def write_file(filename="", text=""):
     """ write to file truncating the existing thing
