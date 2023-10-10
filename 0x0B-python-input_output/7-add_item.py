@@ -1,21 +1,18 @@
 #!/usr/bin/python3
 
-import json
+"""this is just a sys module """
 import sys
-import os
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
+if __name__ == '__main__':
+    save_to_json = __import__('5-save_to_json_file').save_to_json_file
+    load_from_json = __import__('6-load_from_json_file').load_from_json_file
 
-if not (os.path.exists("add_item.json")):
+try:
+    ma_list = load_from_json("add_item.json")
+except FileNotFoundError:
     ma_list = []
-else:
-    with open("add_item.json", "r", encoding="utf-8") as file:
-        ma_list = load_from_json_file("add_item.json")
 
-for i in range(len(sys.argv)):
+for i in range(1, len(sys.argv)):
     ma_list.append(sys.argv[i])
 
-with open("add_item.json", "w", encoding="utf-8") as file:
-    save_to_json_file(ma_list, file)
-
+save_to_json(ma_list, "add_item.json")
