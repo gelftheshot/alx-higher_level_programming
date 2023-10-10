@@ -7,7 +7,7 @@ import json
 
 
 def load_from_json_file(filename):
-    """ defing a function that does load from filename 
+    """ defing a function that does load from filename
     Args:
         filename - the name of the file
     """
