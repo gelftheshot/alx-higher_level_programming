@@ -1,7 +1,14 @@
 #!/usr/bin/python3
 
+""" defing a fucntion that represting a list pascal"""
+
 
 def pascal_triangle(n):
+    """ the function starts here
+    Args:
+        n(int) - the pascals triangle
+    """
+
     prev = [1, 1]
     new = []
     answer = []
