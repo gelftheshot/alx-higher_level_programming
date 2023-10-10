@@ -15,7 +15,8 @@ class Student():
         """
         self.first_name = first_name
         self.last_name = last_name
-        self.age = age 
+        self.age = age
+
     def to_json(self):
         """ rettuen the dic represtation of calss """
-        retuen (self.__dict__)
+        return (self.__dict__)
