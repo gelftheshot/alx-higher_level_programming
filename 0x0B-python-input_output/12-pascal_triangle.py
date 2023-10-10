@@ -5,6 +5,10 @@ def pascal_triangle(n):
     prev = [1, 1]
     new = []
     answer = []
+    if (n <= 0):
+        return ([])
+    if n == 1:
+        return ([[1]])
     answer.append([1])
     answer.append(prev)
 
