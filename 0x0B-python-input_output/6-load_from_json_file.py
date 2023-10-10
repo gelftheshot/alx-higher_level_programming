@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 
+"""this is the json library """
 import json
+
+""" defining a functiont that just load from a json file"""
+
 
 def load_from_json_file(filename):
 
