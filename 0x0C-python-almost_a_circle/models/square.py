@@ -3,6 +3,8 @@
 from models import rectangle
 Rectangle = rectangle.Rectangle
 
+""" the square class started here """
+
 
 class Square(Rectangle):
     """ this is the place of documentation"""
