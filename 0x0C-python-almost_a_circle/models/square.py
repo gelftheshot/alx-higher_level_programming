@@ -9,7 +9,7 @@ from models.rectangle import Rectangle
 class Square(Rectangle):
     """ this is the place of documentation"""
     def __init__(self, size, x=0, y=0, id=None):
-        """ this function initalize the squre instances 
+        """ this function initalize the squre instances
         Args:
             size(int) - is the size of squar
             x(int) - the x postion
