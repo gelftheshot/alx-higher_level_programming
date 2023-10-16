@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-from models import rectangle
-Rectangle = rectangle.Rectangle
+from models.rectangel import Rectangle
 
 """ the square class started here """
 
@@ -9,6 +8,13 @@ Rectangle = rectangle.Rectangle
 class Square(Rectangle):
     """ this is the place of documentation"""
     def __init__(self, size, x=0, y=0, id=None):
+        """ this function initalize the squre instances 
+        Args:
+            size(int) - is the size of squar
+            x(int) - the x postion
+            y(int) - the y postion
+            id(id) - the idntifcation number
+        """
         super().__init__(size, size, x, y, id)
 
     @property
