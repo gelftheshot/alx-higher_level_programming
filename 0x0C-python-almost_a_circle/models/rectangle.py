@@ -3,6 +3,8 @@
 """ this is the rectangle class that inherts from the base calss """
 from models.base import Base
 
+""" the rectangle calss is starting here """
+
 
 class Rectangle(Base):
     """ the rectangle class started here """
@@ -29,7 +31,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -42,7 +44,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
@@ -55,7 +57,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
@@ -69,7 +71,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
@@ -77,22 +79,73 @@ class Rectangle(Base):
 
     def area(self):
         """ is the are of the rectangle """
-        return self.__width * self.__height
+        return self.width * self.height
 
     def display(self):
         """ this is the display function that display #"""
-        for i in range(self.__y - 1):
-            print("")
+        for i in range(self.y):
+            print("\n", end="")
 
-        for i in range(self.__height):
-            print(" " * self.__x, end="")
-            for j in range(self.__width):
+        for i in range(self.height):
+            print(" " * self.x, end="")
+            for j in range(self.width):
                 print("#", end="")
             print("")
 
     def __str__(self):
         """ return the printable format for the function"""
         s = "[Rectangle] (" + str(self.id) + ") "
-        s += str(self.__x) + "/" + str(self.__y)
-        s += " - " + str(self.__width) + "/" + str(self.__height)
+        s += str(self.x) + "/" + str(self.y)
+        s += " - " + str(self.width) + "/" + str(self.height)
         return (s)
+
+    def update(self, *args, **kwargs):
+        """ updeate the attribues based on args
+        Args:
+            *args - are the list of value of attributes
+            **kwargs is the key value pair
+        if *args exit and not empty, kwargs should be skipped
+        """
+        if ((args is not None) and (len(args) != 0)):
+            for i in range(len(args)):
+                if i == 0:
+                    if args[i] is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = args[i]
+                if i == 1:
+                    self.width = args[i]
+                if i == 2:
+                    self.height = args[i]
+                if i == 3:
+                    self.x = args[i]
+                if i == 4:
+                    self.y = args[i]
+        else:
+            if (type(kwargs) is dict):
+                for key, value in kwargs.items():
+                    if (key == "id"):
+                        if value is None:
+                            w = self.width
+                            h = self.height
+                            self.__init__(w, h, self.x, self.y)
+                        else:
+                            self.id = value
+                    if (key == "width"):
+                        self.width = value
+                    if (key == "height"):
+                        self.height = value
+                    if (key == "x"):
+                        self.x = value
+                    if (key == "y"):
+                        self.y = value
+
+    def to_dictionary(self):
+        """Return the dictionary representation of a Rectangle."""
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
