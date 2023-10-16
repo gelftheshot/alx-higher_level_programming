@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+""" we have to important some importat functions """
 from models.rectangel import Rectangle
 
 """ the square class started here """
