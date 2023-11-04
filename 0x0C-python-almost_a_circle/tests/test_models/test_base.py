@@ -13,18 +13,22 @@ class Test_base_init(unittest.TestCase):
         b1 = Base()
         b2 = Base()
         self.assertEqual(b1.id, b2.id-1)
+
     def test_given_id(self):
         b = Base(77)
         self.assertEqual(77, b.id)
+
     def test_give_id_mix(self):
         b1 = Base()
         b2 = Base(77)
         b3 = Base()
         self.assertEqual(b1.id, b3.id - 1)
         self.assertEqual(77, b2.id)
+
     def test_invalid_value(self):
         with self.assertRaises(TypeError):
             b = Base(1, 2)
+
 
 class TestBase_to_json_string(unittest.TestCase):
     """Testing to json string method ."""
@@ -52,10 +56,7 @@ class TestBase_to_json_string(unittest.TestCase):
 
     def test_to_json_string_none(self):
         self.assertEqual("[]", Base.to_json_string(None))
-
-
-
-
+        
 class TestBase_save_to_file(unittest.TestCase):
     """Testing the method save_to_json_file."""
 
