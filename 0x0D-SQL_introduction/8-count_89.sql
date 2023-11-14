@@ -1,4 +1,4 @@
---a script that displays the number of records with id = 89
+-- scr tht disp the num of rec
 SELECT COUNT(*)
 FROM `first_table`
 WHERE `id` = 89;
