@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 let v1 = 'undefined';
-const v2 = ' is ';
+const v2 = 'is';
 let v3 = 'undefined';
 
 if (process.argv[2]) {
