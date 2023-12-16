@@ -14,4 +14,4 @@ if __name__ == "__main__":
     cur.execute("SELECT cities.name, states.name FROM states "
                 "INNER JOIN cities ON cities.state_id=states.id")
     cities = [city[0] for city in cur.fetchall() if city[1] == sys.argv[4]]
-    print(",".join(cities))
+    print(", ".join(cities))
