@@ -4,9 +4,6 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
-""" represting a states class """
-
-
 class State(Base):
     """ this is states class that will be connect to my sql
         databse use mysqlalchemy modul
