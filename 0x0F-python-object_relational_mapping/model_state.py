@@ -4,7 +4,7 @@ from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
-
+""" defining a state class that will be table """
 
 class State(Base):
     """Represents a state for a MySQL database.
