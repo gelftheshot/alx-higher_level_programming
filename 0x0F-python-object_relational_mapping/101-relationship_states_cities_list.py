@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """
-
+    this is code that prints state and city in that state
+    the printing is in this format
+    <state id>: <state name>
+    <tabulation><city id>: <city name>
 """
 import sys
 from sqlalchemy import create_engine
