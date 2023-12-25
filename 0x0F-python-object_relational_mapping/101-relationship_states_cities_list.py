@@ -22,6 +22,5 @@ if __name__ == "__main__":
 
     for state in states:
         print(str(state.id) + ':', state.name)
-        cities = session.query(City).where(City.state_id == state.id)
-        for city in cities:
+        for city in state.cities:
             print("\t{}: {}".format(city.id, city.name))
