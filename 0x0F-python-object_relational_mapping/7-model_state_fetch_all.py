@@ -8,11 +8,12 @@ import sys
 path = f"mysql://{sys.argv[1]}:{sys.argv[2]}@localhost/{sys.argv[3]}"
 
 engine = create_engine(path)
-
+Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-states = session.query(State).all()
+states = session.query(State).order_by(State.id)
 
 for state in states:
     print(str(state.id) + ':', state.name)
+session.close()
