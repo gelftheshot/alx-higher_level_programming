@@ -6,7 +6,7 @@ from sqlalchemy import create_engine, select
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 import sys
-""" 
+"""
 a script that select every thing in the student order by it' id
 """
 if __name__ == "__main__":
