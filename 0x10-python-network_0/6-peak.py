@@ -7,8 +7,6 @@ def find_peak(list_of_integers):
         return None
     if (len(list_of_integers) == 1):
         return list_of_integers[0]
-    a = find_peak(list_of_integers[:len(list_of_integers)//2])
-    b = find_peak(list_of_integers[len(list_of_integers)//2:])
-    if a > b:
-        return a
+    return max(find_peak(list_of_integers[:len(list_of_integers)//2]), \
+    find_peak(list_of_integers[len(list_of_integers)//2:]))
     return b
