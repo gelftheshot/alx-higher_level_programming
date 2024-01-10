@@ -9,10 +9,11 @@ if __name__ == "__main__":
     else:
         val = {"q": sys.argv[1]}
     r = requests.post("http://0.0.0.0:5000/search_user", data=val)
-    jfile = r.json()
-    if isinstance(jfile, dict) and jfile != {}:
-        print("[{}] {}".format(jfile['id'], jfile['name']))
-    elif jfile == {}:
-        print("No result")
-    else:
+    try:
+        jfile = r.json()
+        if jfile != {}:
+            print("[{}] {}".format(jfile['id'], jfile['name']))
+        else:
+            print("No result")
+    except ValueError:
         print("Not a valid JSON")
