@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+"""a Python script that fetches url status using request"""
+import requests
+import sys
+if __name__ == "__main__":
+    r = requests.get(sys.argv[1])
+    val = r.headers
+    print(val["X-Request-Id"])
