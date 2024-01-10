@@ -3,15 +3,16 @@
 import requests
 import sys
 
-url = "https://api.github.com/repos/" + sys.argv[2] + "/" + sys.argv[1] + "/commits"
-r = requests.get(url)
-rjson = r.json()
+if __name__ == "__main__":
+    url = "https://api.github.com/repos/" + sys.argv[2] + "/" + sys.argv[1] + "/commits"
+    r = requests.get(url)
+    rjson = r.json()
 
-j = 0
-for i in rjson:
-    if (j < 10):
-        print("{}: {}".format(i['sha'], i['commit']['author']['name']))
-        j += 1
-    else:
-        break
+    j = 0
+    for i in rjson:
+        if (j < 10):
+            print("{}: {}".format(i['sha'], i['commit']['author']['name']))
+            j += 1
+        else:
+            break
 
