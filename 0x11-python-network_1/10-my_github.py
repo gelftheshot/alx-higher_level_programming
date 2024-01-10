@@ -5,6 +5,8 @@ import sys
 import requests
 
 if __name__ == "__main__":
-    r = requests.get("https://api.github.com/user", auth=(sys.argv[1], sys.argv[2]))
+    url = "https://api.github.com/user"
+    auth = (sys.argv[1], sys.argv[2])
+    r = requests.get(url, auth=auth)
     rjson = r.json()
     print(rjson.get('id'))
