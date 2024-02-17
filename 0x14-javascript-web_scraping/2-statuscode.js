@@ -4,7 +4,7 @@ const axios = require('axios');
 
 axios.get('https://api.github.com/users/github')
   .then(response => {
-    console.log(response.status);
+    console.log('code:', response.status);
   })
   .catch(error => {
     console.error(error);
