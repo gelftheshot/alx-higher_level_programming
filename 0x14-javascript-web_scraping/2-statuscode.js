@@ -8,9 +8,9 @@ axios.get(url, {
     return true;
   }
 })
-.then(response => {
-  console.log('code:', response.status);
-})
-.catch(error => {
-  console.log('Error:', error.message);
-});
+  .then(response => {
+    console.log('code:', response.status);
+  })
+  .catch(error => {
+    console.log('Error:', error.message);
+  });
