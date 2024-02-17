@@ -6,11 +6,11 @@ const url = process.argv[2];
 const file = process.argv[3];
 
 axios.get(url, {
-    responseType: 'arraybuffer'
+  responseType: 'arraybuffer'
 })
-.then(response => {
+  .then(response => {
     return fs.writeFile(file, response.data);
-})
-.catch(error => {
+  })
+  .catch(error => {
     console.error(error.message);
-});
+  });
